@@ -1,3 +1,8 @@
+/* input全体に指定する場合は以下 */
+input{
+    -webkit-appearance: none;
+}
+
 * {
     margin: 0px;
     padding: 0px;
