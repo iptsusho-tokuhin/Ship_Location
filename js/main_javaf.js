@@ -55,18 +55,6 @@ window.onload = function() {
 	};
 	map = new google.maps.Map(document.getElementById("map_canvas"), opts);
 
-	DrowRouteLine_EU();
-	DrowRouteLine_USA();
-	DrowRouteLine_CN();
-	DrowRouteLine_ASEAN();
-	DrowRouteLine_TW();
-	DrowRouteLine_Air();
-	Intput_from_gas();
-}
-
-
-function Set_Initial()
-{
 	if(document.getElementById("In_Out").value == "output")//inputとoutputとで初期表示を切り替え
 	{	
 		for(var i = 0; i <= max; i++)
@@ -83,7 +71,19 @@ function Set_Initial()
 		}
 		document.getElementById("interface").style.display = "block";
 	}
+	
+	DrowRouteLine_EU();
+	DrowRouteLine_USA();
+	DrowRouteLine_CN();
+	DrowRouteLine_ASEAN();
+	DrowRouteLine_TW();
+	DrowRouteLine_Air();
+	Intput_from_gas();
+}
 
+
+function Set_Initial()
+{
 	var today = new Date();
 	today.setDate(today.getDate());
 	var yyyy = today.getFullYear();
