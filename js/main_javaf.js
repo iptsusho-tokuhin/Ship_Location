@@ -16,7 +16,7 @@ url + "AIRPLANE_L.png?raw=true",
 url + "AIRPLANE_R.png?raw=true"
 ];
 
-var max = 15;
+var max = 20;
 
 var NAME = 0;
 var IVNO = 1;
