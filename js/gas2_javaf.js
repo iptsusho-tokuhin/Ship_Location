@@ -7,7 +7,7 @@ function Output_to_gas()
 	data[0] = [];
 	for(var i = 0; i <= max; i++)
 	{
-		data[i] - [];
+		data[0][i] - [];
 		for(var j = 0; j <= FLAG; j++)
 		{
 			if(j == AUTO||j == TABLE)
