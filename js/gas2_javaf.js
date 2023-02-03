@@ -43,8 +43,6 @@ function Output_to_gas()
 		}
 		//text = text + data + ',';
         }
-        //text = text + '***';
-	}
 	
 	var today = new Date();
 	today.setDate(today.getDate());
@@ -52,17 +50,12 @@ function Output_to_gas()
 	var mm = ("0"+(today.getMonth()+1)).slice(-2);
 	var dd = ("0"+today.getDate()).slice(-2);
  	var date = yyyy + "年" + mm + "月" + dd + "日";
-		
-	//text = text + "　発注済・船便未確定案件　更新日" + date;
+
 	data[2] = [];
 	data[2][0] = [];
 	data[2][0][0] = "　発注済・船便未確定案件　更新日" + date;
 	
 	let DataJSON = JSON.stringify(data); 
-	//var arrayToString = JSON.stringify(Object.assign({}, data));  // convert array to string
-	//var stringToJsonObject = JSON.parse(arrayToString);  // convert string to json object
-	
-	//alert(simpleDataJSON);
 	google.script.run.withSuccessHandler(showStartes).write_ss(DataJSON);
 }
 
