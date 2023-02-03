@@ -40,7 +40,14 @@ function Output_to_gas()
 		{
 			if(j == 2)
 			{
-				if(document.forms[i].elements[j].checked == true){data[1][i][j] = 1;}else{data[1][i][j] = "";}
+				if(document.forms[i].elements[j].checked == true)
+				{
+					data[1][i][j] = 1;
+				}
+				else
+				{
+					data[1][i][j] = "";
+				}
 			}
 			else
 			{
