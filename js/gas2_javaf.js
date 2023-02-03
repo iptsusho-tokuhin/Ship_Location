@@ -46,7 +46,7 @@ function Output_to_gas()
 			{
 				data[1][i][j] = document.forms[i].elements[j].value;
 			}
-		
+		}
         }
 	
 	var today = new Date();
