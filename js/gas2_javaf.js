@@ -54,6 +54,8 @@ function Output_to_gas()
  	var date = yyyy + "年" + mm + "月" + dd + "日";
 		
 	//text = text + "　発注済・船便未確定案件　更新日" + date;
+	data[2] = [];
+	data[2][0] = [];
 	data[2][0][0] = "　発注済・船便未確定案件　更新日" + date;
 	
 	var array = [1, 2, 3, 4]; 
