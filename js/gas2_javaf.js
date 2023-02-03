@@ -7,10 +7,9 @@ function Output_to_gas()
 	data[0] = [];
 	for(var i = 0; i <= max; i++)
 	{
-		data[0][i] - [];
+		data[0][i] = [];
 		for(var j = 0; j <= FLAG; j++)
 		{
-			alert(i + " " + j);
 			if(j == AUTO||j == TABLE)
 			{
 				if(document.forms[i].elements[j].checked == true){data[0][i][j] = 1;}else{data[0][i][j] = "";}
