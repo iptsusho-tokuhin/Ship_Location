@@ -12,7 +12,14 @@ function Output_to_gas()
 		{
 			if(j == AUTO||j == TABLE)
 			{
-				if(document.forms[i].elements[j].checked == true){data[0][i][j] = 1;}else{data[0][i][j] = "";}
+				if(document.forms[i].elements[j].checked == true)
+				{
+					data[0][i][j] = 1;
+				}
+				else
+				{
+					data[0][i][j] = "";
+				}
 			}
 			else if(j == IVNO||j == DATE_DEP||j == DATE_ARR)
 			{
@@ -22,9 +29,7 @@ function Output_to_gas()
 			{
 				data[0][i][j] = document.forms[i].elements[j].value;
 			}
-				//text = text + data + ',';
 		}
-		//text = text +  '***';
 	}
 
 	data[1]= [];
@@ -33,15 +38,15 @@ function Output_to_gas()
 		data[1][i] = [];
 		for(var j = 0; j <= 4; j++)
 		{
-		if(j == 2)
-		{
-			if(document.forms[i].elements[j].checked == true){data[1][i][j] = 1;}else{data[1][i][j] = "";}
-		}
-		else
-		{
-			data[1][i][j] = document.forms[i].elements[j].value;
-		}
-		//text = text + data + ',';
+			if(j == 2)
+			{
+				if(document.forms[i].elements[j].checked == true){data[1][i][j] = 1;}else{data[1][i][j] = "";}
+			}
+			else
+			{
+				data[1][i][j] = document.forms[i].elements[j].value;
+			}
+		
         }
 	
 	var today = new Date();
