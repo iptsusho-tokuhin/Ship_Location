@@ -2,44 +2,48 @@ function Output_to_gas()
 {
 	document.getElementById('startes').innerHTML = "保存中";
 	let text = "";
-	var data;
+	var data = [];
 
+	data[0] = [];
 	for(var i = 0; i <= max; i++)
 	{
+		data[i] - [];
 		for(var j = 0; j <= FLAG; j++)
 		{
 			if(j == AUTO||j == TABLE)
 			{
-				if(document.forms[i].elements[j].checked == true){data = 1;}else{data = "";}
+				if(document.forms[i].elements[j].checked == true){data[0][i][j] = 1;}else{data[0][i][j] = "";}
 			}
 			else if(j == IVNO||j == DATE_DEP||j == DATE_ARR)
 			{
-				data = "##" + document.forms[i].elements[j].value;
+				data[0][i][j] = "##" + document.forms[i].elements[j].value;
 			}
 			else
 			{
-				data = document.forms[i].elements[j].value;
+				data[0][i][j] = document.forms[i].elements[j].value;
 			}
-				text = text + data + ',';
+				//text = text + data + ',';
 		}
-		text = text +  '***';
+		//text = text +  '***';
 	}
 
+	data[1]= [];
 	for(var i = max + 1; i <= max + 10; i++)
 	{
+		data[1][i] = [];
 		for(var j = 0; j <= 4; j++)
 		{
 		if(j == 2)
 		{
-			if(document.forms[i].elements[j].checked == true){data = 1;}else{data = "";}
+			if(document.forms[i].elements[j].checked == true){data[1][i][j] = 1;}else{data[1][i][j] = "";}
 		}
 		else
 		{
-			data = document.forms[i].elements[j].value;
+			data[1][i][j] = document.forms[i].elements[j].value;
 		}
-		text = text + data + ',';
+		//text = text + data + ',';
         }
-        text = text + '***';
+        //text = text + '***';
 	}
 	
 	var today = new Date();
@@ -49,8 +53,15 @@ function Output_to_gas()
 	var dd = ("0"+today.getDate()).slice(-2);
  	var date = yyyy + "年" + mm + "月" + dd + "日";
 		
-	text = text + "　発注済・船便未確定案件　更新日" + date;
-	google.script.run.withSuccessHandler(showStartes).write_ss(text);
+	//text = text + "　発注済・船便未確定案件　更新日" + date;
+	data[2][0][0] = "　発注済・船便未確定案件　更新日" + date;
+	
+	var array = [1, 2, 3, 4]; 
+	var arrayToString = JSON.stringify(Object.assign({}, data));  // convert array to string
+	var stringToJsonObject = JSON.parse(arrayToString);  // convert string to json object
+	
+	alert(stringToJsonObject);
+	//google.script.run.withSuccessHandler(showStartes).write_ss(text);
 }
 
 function showStartes(returnString)
