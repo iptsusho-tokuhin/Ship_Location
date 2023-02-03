@@ -62,8 +62,8 @@ function Output_to_gas()
 	//var arrayToString = JSON.stringify(Object.assign({}, data));  // convert array to string
 	//var stringToJsonObject = JSON.parse(arrayToString);  // convert string to json object
 	
-	alert(simpleDataJSON);
-	//google.script.run.withSuccessHandler(showStartes).write_ss(text);
+	//alert(simpleDataJSON);
+	google.script.run.withSuccessHandler(showStartes).write_ss(simpleDataJSON);
 }
 
 function showStartes(returnString)
