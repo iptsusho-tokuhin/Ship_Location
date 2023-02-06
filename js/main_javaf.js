@@ -78,7 +78,7 @@ window.onload = function() {
 	DrowRouteLine_ASEAN();
 	DrowRouteLine_TW();
 	DrowRouteLine_Air();
-	Intput_from_gas();
+	Input_from_gas();
 }
 
 
