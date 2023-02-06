@@ -82,45 +82,40 @@ function Intput_from_gas()
 	google.script.run.withSuccessHandler(output_to_html).read_ss();
 }
 
-function output_to_html(text)
+function output_to_html(input)
 {
-	text = text.replace(/##/g, '');
-	let arr_text = text.split('***');
-	let data;
-      
+	var data = JSON.parse(input);
 	for (var i = 0 ; i <= max ; i++)
 	{
-		data = arr_text[i].split(',');
 		for (var j = 0 ; j <= FLAG ; j++)
         	{
 			if(j == AUTO||j == TABLE)
 			{
-				document.forms[i].elements[j].checked = data[j];
+				document.forms[i].elements[j].checked = data[0][i][j];
 			}
 			else
 			{
-				document.forms[i].elements[j].value = data[j];
+				document.forms[i].elements[j].value = data[0][i][j];
 			}
 		}
 	}
 
-	for(var i = max + 1; i <= max + 10; i++)
+	for(var 0; i <= 9; i++)
 	{
-		data = arr_text[i].split(',');
 		for(var j = 0; j <= 4; j++)
 		{
 			if(j == 2)
 			{
-				document.forms[i].elements[j].checked = data[j];
+				document.forms[i + max + 1].elements[j].checked = data[1][i][j];
 			}
 			else
 			{
-				document.forms[i].elements[j].value = data[j];
+				document.forms[i + max + 1].elements[j].value = data[1][i][j];
 			}
 		}
 	}
 
-	document.getElementById('index').textContent = arr_text[max + 11];
+	document.getElementById('index').textContent = [2][0][0];
 	document.getElementById('startes').innerHTML = "読込完了";
 	ButtonTypeChange();
 	Reach_Rate();
