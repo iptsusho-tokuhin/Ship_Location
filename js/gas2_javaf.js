@@ -100,7 +100,7 @@ function output_to_html(input)
 		}
 	}
 
-	for(var 0; i <= 9; i++)
+	for(var i = 0; i <= 9; i++)
 	{
 		for(var j = 0; j <= 4; j++)
 		{
