@@ -76,7 +76,7 @@ function showStartes(returnString)
 	document.getElementById('startes').innerHTML = returnString;
 }
    
-function Intput_from_gas()
+function Input_from_gas()
 {
 	document.getElementById('startes').innerHTML = "読込中";
 	google.script.run.withSuccessHandler(output_to_html).read_ss();
@@ -85,20 +85,20 @@ function Intput_from_gas()
 function output_to_html(input)
 {
 	var data = JSON.parse(input);
-	//for (var i = 0 ; i <= max ; i++)
-	//{
-	//	for (var j = 0 ; j <= FLAG ; j++)
-        //	{
-	//		if(j == AUTO||j == TABLE)
-	//		{
-	//			document.forms[i].elements[j].checked = data[0][i][j];
-	//		}
-	//		else
-	//		{
-	//			document.forms[i].elements[j].value = data[0][i][j];
-	//		}
-	//	}
-	//}
+	for (var i = 0 ; i <= max ; i++)
+	{
+		for (var j = 0 ; j <= FLAG ; j++)
+        	{
+			if(j == AUTO||j == TABLE)
+			{
+				document.forms[i].elements[j].checked = data[0][i][j];
+			}
+			else
+			{
+				document.forms[i].elements[j].value = data[0][i][j];
+			}
+		}
+	}
 
 	for(var 0; i <= 9; i++)
 	{
@@ -115,7 +115,7 @@ function output_to_html(input)
 		}
 	}
 
-	//document.getElementById('index').textContent = [2][0][0];
+	document.getElementById('index').textContent = [2][0][0];
 	document.getElementById('startes').innerHTML = "読込完了２";
 	ButtonTypeChange();
 	Reach_Rate();
