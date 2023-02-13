@@ -98,7 +98,7 @@ function output_to_html(input)
 		}
 	}
 
-	document.getElementById('index').textContent = [2][0][0];
+	document.getElementById('index').textContent = data[2][0][0];
 	document.getElementById('startes').innerHTML = "読込完了";
 	ButtonTypeChange();
 	Reach_Rate();
