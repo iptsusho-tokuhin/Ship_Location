@@ -12,14 +12,7 @@ function Output_to_gas()
 		{
 			if(j == AUTO||j == TABLE)
 			{
-				if(document.forms[i].elements[j].checked == true)
-				{
-					data[0][i][j] = true;
-				}
-				else
-				{
-					data[0][i][j] = false;
-				}
+				data[0][i][j] = document.forms[i].elements[j].checked;
 			}
 			else
 			{
