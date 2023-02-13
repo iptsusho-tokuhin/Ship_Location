@@ -14,11 +14,11 @@ function Output_to_gas()
 			{
 				if(document.forms[i].elements[j].checked == true)
 				{
-					data[0][i][j] = 1;
+					data[0][i][j] = true;
 				}
 				else
 				{
-					data[0][i][j] = "";
+					data[0][i][j] = false;
 				}
 			}
 			else
