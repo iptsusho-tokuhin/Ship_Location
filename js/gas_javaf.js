@@ -97,6 +97,7 @@ function output_to_html(input)
 			}
 			else
 			{
+				alert(data[0][i][j]);
 				document.forms[i].elements[j].value = data[0][i][j];
 			}
 		}
