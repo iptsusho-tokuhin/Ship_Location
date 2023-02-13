@@ -29,14 +29,7 @@ function Output_to_gas()
 		{
 			if(j == 2)
 			{
-				if(document.forms[i + max + 1].elements[j].checked == true)
-				{
-					data[1][i][j] = 1;
-				}
-				else
-				{
-					data[1][i][j] = "";
-				}
+				data[1][i][j] = document.forms[i + max + 1].elements[j].checked;
 			}
 			else
 			{
