@@ -25,7 +25,7 @@ function Output_to_gas()
 			
 			//else if(j == IVNO||j == DATE_DEP||j == DATE_ARR)
 			//{
-				data[0][i][j] = "##" + document.forms[i].elements[j].value;
+			//	data[0][i][j] = document.forms[i].elements[j].value;
 			//}
 			//else
 			//{
