@@ -21,14 +21,16 @@ function Output_to_gas()
 					data[0][i][j] = "";
 				}
 			}
-			else if(j == IVNO||j == DATE_DEP||j == DATE_ARR)
-			{
+			data[0][i][j] = document.forms[i].elements[j].value;
+			
+			//else if(j == IVNO||j == DATE_DEP||j == DATE_ARR)
+			//{
 				data[0][i][j] = "##" + document.forms[i].elements[j].value;
-			}
-			else
-			{
-				data[0][i][j] = document.forms[i].elements[j].value;
-			}
+			//}
+			//else
+			//{
+			//	data[0][i][j] = document.forms[i].elements[j].value;
+			//}
 		}
 	}
 
