@@ -21,7 +21,10 @@ function Output_to_gas()
 					data[0][i][j] = "";
 				}
 			}
-			data[0][i][j] = document.forms[i].elements[j].value;
+			else
+			{
+				data[0][i][j] = document.forms[i].elements[j].value;
+			}
 		}
 	}
 
