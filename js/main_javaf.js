@@ -388,8 +388,8 @@ function DrowRouteLine_CapeofGoodHope()//EU航路の線を引く
 	patharray[CapeofGoodHope][12] = new google.maps.LatLng(26.395408, 126.687145);
 	patharray[CapeofGoodHope][13] = new google.maps.LatLng(32.993032, 135.126387);
 
-	var polylineOpts_CapeofGoodHope = {map: map, path: patharray[EU], geodesic:true, strokeColor: "darkcyan", strokeWeight: 3, strokeOpacity: 0.5};
-	var polyline_CapeofGoodHope = new google.maps.Polyline(polylineOpts_EU);
+	var polylineOpts_CapeofGoodHope = {map: map, path: patharray[CapeofGoodHope], geodesic:true, strokeColor: "darkcyan", strokeWeight: 3, strokeOpacity: 0.5};
+	var polyline_CapeofGoodHope = new google.maps.Polyline(polylineOpts_CapeofGoodHope);
 }
 
 
