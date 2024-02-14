@@ -78,6 +78,7 @@ window.onload = function() {
 	DrowRouteLine_ASEAN();
 	DrowRouteLine_TW();
 	DrowRouteLine_Air();
+	DrowRouteLine_CapeofGoodHope();
 	Input_from_gas();
 }
 
@@ -153,6 +154,7 @@ var patharray_USA2 = new Array();//シアトル→日本
 var patharray_USA3 = new Array();//ノーフォーク→チャールストン→パナマ運河→日本
 var patharray_CN = new Array();//青島→上海→日本
 var patharray_ASEAN = new Array();//インドネシア→日本
+var patharray_CapeofGoodHope = new Array();//オランダ→喜望峰→シンガポール→日本
 
 var distance_EU = new Array();//オランダ→スエズ運河→シンガポール→日本
 var distance_USA1 = new Array();//ロサンゼルス→日本
@@ -160,6 +162,7 @@ var distance_USA2 = new Array();//シアトル→日本
 var distance_USA3 = new Array();//ノーフォーク→チャールストン→パナマ運河→日本
 var distance_CN = new Array();//青島→上海→日本
 var distance_ASEAN = new Array();//インドネシア→日本
+var distance_CapeofGoodHope = new Array();//オランダ→喜望峰→シンガポール→日本
 
 var percent_EU = new Array();//オランダ→スエズ運河→シンガポール→日本
 var percent_USA1 = new Array();//ロサンゼルス→日本
@@ -167,6 +170,7 @@ var percent_USA2 = new Array();//シアトル→日本
 var percent_USA3 = new Array();//ノーフォーク→チャールストン→パナマ運河→日本
 var percent_CN = new Array();//青島→上海→日本
 var percent_ASEAN = new Array();//インドネシア→日本
+var percent_CapeofGoodHope = new Array();//オランダ→喜望峰→シンガポール→日本
 
 var patharray = new Array();
 var distance= new Array();
@@ -181,6 +185,7 @@ var ASEAN = 5;
 var TW = 6;
 var AirEU = 7;
 var AirUSA = 8;
+var CapeofGoodHope = 9;
 
 patharray[EU] = new Array();//オランダ→スエズ運河→シンガポール→日本
 patharray[USA1] = new Array();//ロサンゼルス→日本
@@ -191,6 +196,7 @@ patharray[ASEAN] = new Array();//インドネシア→日本
 patharray[TW] = new Array();//台湾→日本
 patharray[AirEU] = new Array();//
 patharray[AirUSA] = new Array();//
+patharray[CapeofGoodHope] = new Array();//
 
 distance[EU] = new Array();//オランダ→スエズ運河→シンガポール→日本
 distance[USA1] = new Array();//ロサンゼルス→日本
@@ -201,6 +207,7 @@ distance[ASEAN] = new Array();//インドネシア→日本
 distance[TW] = new Array();//台湾→日本
 distance[AirEU] = new Array();//
 distance[AirUSA] = new Array();//
+distance[CapeofGoodHope] = new Array();//
 
 percent[EU] = new Array();//オランダ→スエズ運河→シンガポール→日本
 percent[USA1] = new Array();//ロサンゼルス→日本
@@ -211,6 +218,7 @@ percent[ASEAN] = new Array();//インドネシア→日本
 percent[TW] = new Array();//台湾→日本
 percent[AirEU] = new Array();//
 percent[AirUSA] = new Array();//
+percent[CapeofGoodHope] = new Array();//
 
 function DrowRouteLine_EU()//EU航路の線を引く
 {
@@ -363,7 +371,26 @@ function DrowRouteLine_Air()//航空路
 	var polyline_AirUSA = new google.maps.Polyline(polylineOpts_AirUSA);
 }
  
+function DrowRouteLine_CapeofGoodHope()//EU航路の線を引く
+{
+	patharray[EU][0] = new google.maps.LatLng(51.887287, 3.914865);//オランダ→スエズ運河→シンガポール→日本
+	patharray[EU][1] = new google.maps.LatLng(48.584620, -4.787783);
+	patharray[EU][2] = new google.maps.LatLng(41.593424, -10.359403);
+	patharray[EU][3] = new google.maps.LatLng(21.301965, -18.458515);
+	patharray[EU][4] = new google.maps.LatLng(10.506022, -17.617823);
+	patharray[EU][5] = new google.maps.LatLng(-35.766863, 19.272974);
+	patharray[EU][6] = new google.maps.LatLng(6.049252, 94.775323);
+	patharray[EU][7] = new google.maps.LatLng(6.057735, 96.321668);
+	patharray[EU][8] = new google.maps.LatLng(1.135852, 103.657384);
+	patharray[EU][9] = new google.maps.LatLng(1.328037, 104.356027);
+	patharray[EU][10] = new google.maps.LatLng(3.130172, 105.570735);
+	patharray[EU][11] = new google.maps.LatLng(20.787345, 121.161279);
+	patharray[EU][12] = new google.maps.LatLng(26.395408, 126.687145);
+	patharray[EU][13] = new google.maps.LatLng(32.993032, 135.126387);
 
+	var polylineOpts_CapeofGoodHope = {map: map, path: patharray[EU], geodesic:true, strokeColor: "darkcyan", strokeWeight: 3, strokeOpacity: 0.5};
+	var polyline_CapeofGoodHope = new google.maps.Polyline(polylineOpts_EU);
+}
 
 
 
