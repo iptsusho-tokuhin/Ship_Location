@@ -1,6 +1,6 @@
 ﻿function Reach_Rate()//各点の到達率計算
 {
-	for(var j = 0; j <= patharray.length; j++)//各航路番号ごと
+	for(var j = 0; j <= patharray.length - 1; j++)//各航路番号ごと
 	{
 		for(var i = 0; i <= patharray[j].length - 1; i++)
 		{
