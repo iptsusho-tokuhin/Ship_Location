@@ -373,20 +373,20 @@ function DrowRouteLine_Air()//航空路
  
 function DrowRouteLine_CapeofGoodHope()//EU航路の線を引く
 {
-	patharray[EU][0] = new google.maps.LatLng(51.887287, 3.914865);//オランダ→スエズ運河→シンガポール→日本
-	patharray[EU][1] = new google.maps.LatLng(48.584620, -4.787783);
-	patharray[EU][2] = new google.maps.LatLng(41.593424, -10.359403);
-	patharray[EU][3] = new google.maps.LatLng(21.301965, -18.458515);
-	patharray[EU][4] = new google.maps.LatLng(10.506022, -17.617823);
-	patharray[EU][5] = new google.maps.LatLng(-35.766863, 19.272974);
-	patharray[EU][6] = new google.maps.LatLng(6.049252, 94.775323);
-	patharray[EU][7] = new google.maps.LatLng(6.057735, 96.321668);
-	patharray[EU][8] = new google.maps.LatLng(1.135852, 103.657384);
-	patharray[EU][9] = new google.maps.LatLng(1.328037, 104.356027);
-	patharray[EU][10] = new google.maps.LatLng(3.130172, 105.570735);
-	patharray[EU][11] = new google.maps.LatLng(20.787345, 121.161279);
-	patharray[EU][12] = new google.maps.LatLng(26.395408, 126.687145);
-	patharray[EU][13] = new google.maps.LatLng(32.993032, 135.126387);
+	patharray[CapeofGoodHope][0] = new google.maps.LatLng(51.887287, 3.914865);//オランダ→スエズ運河→シンガポール→日本
+	patharray[CapeofGoodHope][1] = new google.maps.LatLng(48.584620, -4.787783);
+	patharray[CapeofGoodHope][2] = new google.maps.LatLng(41.593424, -10.359403);
+	patharray[CapeofGoodHope][3] = new google.maps.LatLng(21.301965, -18.458515);
+	patharray[CapeofGoodHope][4] = new google.maps.LatLng(10.506022, -17.617823);
+	patharray[CapeofGoodHope][5] = new google.maps.LatLng(-35.766863, 19.272974);
+	patharray[CapeofGoodHope][6] = new google.maps.LatLng(6.049252, 94.775323);
+	patharray[CapeofGoodHope][7] = new google.maps.LatLng(6.057735, 96.321668);
+	patharray[CapeofGoodHope][8] = new google.maps.LatLng(1.135852, 103.657384);
+	patharray[CapeofGoodHope][9] = new google.maps.LatLng(1.328037, 104.356027);
+	patharray[CapeofGoodHope][10] = new google.maps.LatLng(3.130172, 105.570735);
+	patharray[CapeofGoodHope][11] = new google.maps.LatLng(20.787345, 121.161279);
+	patharray[CapeofGoodHope][12] = new google.maps.LatLng(26.395408, 126.687145);
+	patharray[CapeofGoodHope][13] = new google.maps.LatLng(32.993032, 135.126387);
 
 	var polylineOpts_CapeofGoodHope = {map: map, path: patharray[EU], geodesic:true, strokeColor: "darkcyan", strokeWeight: 3, strokeOpacity: 0.5};
 	var polyline_CapeofGoodHope = new google.maps.Polyline(polylineOpts_EU);
